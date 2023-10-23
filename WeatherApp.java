@@ -23,13 +23,21 @@ public class WeatherApp {
         FridayWeather = random.nextInt(101);
         SaturdayWeather = random.nextInt(101); 
 
-        
+        String[] Conditions = {"Rainy", "Clear", "Partly Cloudy", "Thunderstorms", "Flooding", "Hurricane", "Hail"};
+
+        String SundayCondition = Conditions[random.nextInt(6)];
+        String MondayCondition = Conditions[random.nextInt(6)];
+        String TuesdayCondition = Conditions[random.nextInt(6)];
+        String WednesdayCondition = Conditions[random.nextInt(6)];
+        String ThursdayCondition = Conditions[random.nextInt(6)];
+        String FridayCondition = Conditions[random.nextInt(6)];
+        String SaturdayCondition = Conditions[random.nextInt(6)];
 
         System.out.println("What day would you like the temperature for?");
-        String Day = userInp.nextLine();
+        String Day = "Sunday" ;//userInp.nextLine();
 
         switch(Day) {
-            case "Sunday": System.out.println("Sundays Temperature:    " + SundayWeather+"F");
+            case "Sunday": System.out.println("Sundays Temperature:    " + SundayWeather+"F" + " And it is currently "+ SundayCondition);
             break;
             case "Monday": System.out.println("Mondays Temperature:    " + MondayWeather+"F");
             break;
@@ -63,6 +71,13 @@ public class WeatherApp {
         
         
         
+        
+
+    }
+
+    static void assignTemperature(int DayTemp){
+        Random random = new Random();
+        DayTemp = random.nextInt(100);
         
 
     }

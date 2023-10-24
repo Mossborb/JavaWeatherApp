@@ -5,6 +5,7 @@ public class WeatherApp {
     public static void main(String[] args) {
 
         Scanner userInp = new Scanner(System.in);
+        //Set<String> daysOfTheWeek = Set.of("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"); DOES NOT WORK
         
         while(true) {
             System.out.println();
@@ -19,7 +20,7 @@ public class WeatherApp {
                 printOptions();
 
             }
-
+            //else if(USER INP IN ARRAY) {PERFORM FUNCTION}
 
         }
 

@@ -7,13 +7,17 @@ public class WeatherApp {
         Scanner userInp = new Scanner(System.in);
         
         while(true) {
-            String askUser = userInp.nextLine().toLowerCase();
+            System.out.println();
             System.out.println("What would you like to do?");
+            String askUser = userInp.nextLine().toUpperCase();
+            System.out.println(" ");
+            
             if(askUser.equals("q")) {
                 break;
             }
-            else if(askUser.equals("hey")) {
-                System.out.print("I SAID HEY!");
+            else if(askUser.equals("OPTIONS")) {
+                printOptions();
+
             }
 
 
@@ -77,5 +81,13 @@ public class WeatherApp {
         DayTemp = random.nextInt(100);
         
 
+    }
+
+    static void printOptions(){
+        String[] Options = {"[Day of the Week]: Provides temperature of specific day", "Week Average: Shows average temperature of week."};
+
+        for(int i = 0; i < Options.length; i++) {
+            System.out.println(Options[i]);
+        }
     }
 }

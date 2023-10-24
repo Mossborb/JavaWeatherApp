@@ -89,5 +89,12 @@ public class WeatherApp {
         for(int i = 0; i < Options.length; i++) {
             System.out.println(Options[i]);
         }
+        waitForEnter(); 
     }
+    static void waitForEnter() {
+        Scanner wait = new Scanner(System.in);
+        System.out.print("Press Enter to Continue: ");
+        String waiting = wait.nextLine();
+    }
+
 }

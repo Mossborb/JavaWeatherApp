@@ -4,8 +4,23 @@ import java.util.Scanner;
 public class WeatherApp {
     public static void main(String[] args) {
 
-        Random random = new Random();
         Scanner userInp = new Scanner(System.in);
+        
+        while(true) {
+            String askUser = userInp.nextLine().toLowerCase();
+            System.out.println("What would you like to do?");
+            if(askUser.equals("q")) {
+                break;
+            }
+            else if(askUser.equals("hey")) {
+                System.out.print("I SAID HEY!");
+            }
+
+
+        }
+
+        Random random = new Random();
+        
 
         int SundayWeather;
         int MondayWeather;
@@ -34,7 +49,7 @@ public class WeatherApp {
         String SaturdayCondition = Conditions[random.nextInt(6)];
 
         System.out.println("What day would you like the temperature for?");
-        String Day = "Sunday" ;//userInp.nextLine();
+        String Day = userInp.nextLine();
 
         switch(Day) {
             case "Sunday": System.out.println("Sundays Temperature:    " + SundayWeather+"F" + " And it is currently "+ SundayCondition);
@@ -55,24 +70,6 @@ public class WeatherApp {
 
 
         }
-
-
-/*
-        
-        
-        
-        System.out.println("Wednesdays Temperature: " + WednesdayWeather+"F");
-        System.out.println("Thursdays Temperature:  " + ThursdayWeather+"F");
-        System.out.println("Fridays Temperature:    " + FridayWeather+"F");
-        System.out.println("Saturdays Temperature:  " + SaturdayWeather+"F");
-
-        System.out.println();
-*/
-        
-        
-        
-        
-
     }
 
     static void assignTemperature(int DayTemp){
